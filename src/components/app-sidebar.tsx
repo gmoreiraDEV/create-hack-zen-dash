@@ -37,7 +37,7 @@ export function AppSidebar() {
         <div className="flex items-center gap-2">
           <div className="flex h-8 w-auto items-center justify-center">
             <Leaf className="h-8 w-8 text-orange-600 mr-2" />
-            <h1 className="text-primary-foreground text-4xl font-bold">Leaf</h1>
+            <h1 className="text-foreground text-4xl font-bold">Leaf</h1>
           </div>
           <div className="h-8 w-px border-b border-sidebar-border" />
         </div>
