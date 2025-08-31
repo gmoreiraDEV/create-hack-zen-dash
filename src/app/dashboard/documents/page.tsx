@@ -108,7 +108,7 @@ export default function Documents() {
                   key={category.id}
                   className={`cursor-pointer transition-all hover:shadow-md ${
                     selectedCategory === category.id
-                      ? "ring-2 ring-primary bg-primary/5"
+                      ? "ring-2 ring-orange-600 bg-primary/5"
                       : ""
                   }`}
                   onClick={() => setSelectedCategory(category.id)}

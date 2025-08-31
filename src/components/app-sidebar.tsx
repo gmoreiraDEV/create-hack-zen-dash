@@ -1,6 +1,15 @@
 import { useSidebarStore } from "@/lib/sidebar-store";
 import { menuItems } from "@/constants";
-import { Home, LogOut, Settings, User, MapPin, Calendar, Bell } from "lucide-react";
+import {
+  Home,
+  LogOut,
+  Settings,
+  User,
+  MapPin,
+  Calendar,
+  Bell,
+  Leaf,
+} from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -26,7 +35,14 @@ export function AppSidebar() {
       {/* Header */}
       <div className="p-4">
         <div className="flex items-center gap-2">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
+          <div className="flex h-8 w-auto items-center justify-center">
+            <Leaf className="h-8 w-8 text-orange-600 mr-2" />
+            <h1 className="text-primary-foreground text-4xl font-bold">Leaf</h1>
+          </div>
+          <div className="h-8 w-px border-b border-sidebar-border" />
+        </div>
+        <div className="flex items-center gap-2 mt-8">
+          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-orange-600 text-primary-foreground">
             <Home className="h-4 w-4" />
           </div>
           <a
@@ -65,7 +81,7 @@ export function AppSidebar() {
               <div className="relative">
                 <Avatar className="h-10 w-10 rounded-lg">
                   <AvatarImage src="/avatars/01.png" alt="John Smith" />
-                  <AvatarFallback className="rounded-lg bg-primary text-primary-foreground">
+                  <AvatarFallback className="rounded-lg bg-orange-600 text-primary-foreground">
                     JS
                   </AvatarFallback>
                 </Avatar>
@@ -94,7 +110,7 @@ export function AppSidebar() {
                 <div className="relative">
                   <Avatar className="h-12 w-12 rounded-lg">
                     <AvatarImage src="/avatars/01.png" alt="John Smith" />
-                    <AvatarFallback className="rounded-lg bg-primary text-primary-foreground">
+                    <AvatarFallback className="rounded-lg bg-orange-600 text-primary-foreground">
                       JS
                     </AvatarFallback>
                   </Avatar>
@@ -135,7 +151,9 @@ export function AppSidebar() {
             <DropdownMenuItem>
               <Bell className="mr-2 h-4 w-4" />
               <span>Notifications</span>
-              <Badge className="ml-auto bg-primary text-primary-foreground">3</Badge>
+              <Badge className="ml-auto bg-orange-600 text-primary-foreground">
+                3
+              </Badge>
             </DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuItem asChild>

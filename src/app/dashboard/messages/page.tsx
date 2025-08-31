@@ -100,7 +100,8 @@ export default function Messages() {
       id: "1",
       senderId: "2",
       senderName: "John Smith",
-      content: "Hi! I wanted to thank you for the orientation materials you sent.",
+      content:
+        "Hi! I wanted to thank you for the orientation materials you sent.",
       timestamp: "10:30 AM",
       status: "read",
       type: "text",
@@ -109,7 +110,8 @@ export default function Messages() {
       id: "2",
       senderId: "me",
       senderName: "You",
-      content: "You're welcome! I'm glad they were helpful. How is your first week going?",
+      content:
+        "You're welcome! I'm glad they were helpful. How is your first week going?",
       timestamp: "10:32 AM",
       status: "read",
       type: "text",
@@ -118,7 +120,8 @@ export default function Messages() {
       id: "3",
       senderId: "2",
       senderName: "John Smith",
-      content: "It's been great! The team here is very welcoming. I have a few questions about the cultural guidelines though.",
+      content:
+        "It's been great! The team here is very welcoming. I have a few questions about the cultural guidelines though.",
       timestamp: "10:35 AM",
       status: "read",
       type: "text",
@@ -127,7 +130,8 @@ export default function Messages() {
       id: "4",
       senderId: "me",
       senderName: "You",
-      content: "Of course! Feel free to ask anything. That's what I'm here for.",
+      content:
+        "Of course! Feel free to ask anything. That's what I'm here for.",
       timestamp: "10:36 AM",
       status: "read",
       type: "text",
@@ -143,9 +147,10 @@ export default function Messages() {
     },
   ];
 
-  const filteredConversations = conversations.filter((conv) =>
-    conv.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    conv.role.toLowerCase().includes(searchTerm.toLowerCase())
+  const filteredConversations = conversations.filter(
+    (conv) =>
+      conv.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      conv.role.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   const selectedConv = conversations.find((c) => c.id === selectedConversation);
@@ -219,7 +224,10 @@ export default function Messages() {
                       <Avatar className="h-12 w-12">
                         <AvatarImage src={conversation.avatar} />
                         <AvatarFallback>
-                          {conversation.name.split(" ").map(n => n[0]).join("")}
+                          {conversation.name
+                            .split(" ")
+                            .map((n) => n[0])
+                            .join("")}
                         </AvatarFallback>
                       </Avatar>
                       {conversation.online && (
@@ -243,7 +251,7 @@ export default function Messages() {
                           {conversation.lastMessage}
                         </p>
                         {conversation.unread > 0 && (
-                          <Badge className="ml-2 bg-primary text-primary-foreground">
+                          <Badge className="ml-2 bg-orange-600 text-primary-foreground">
                             {conversation.unread}
                           </Badge>
                         )}
@@ -266,7 +274,10 @@ export default function Messages() {
                       <Avatar className="h-10 w-10">
                         <AvatarImage src={selectedConv.avatar} />
                         <AvatarFallback>
-                          {selectedConv.name.split(" ").map(n => n[0]).join("")}
+                          {selectedConv.name
+                            .split(" ")
+                            .map((n) => n[0])
+                            .join("")}
                         </AvatarFallback>
                       </Avatar>
                       {selectedConv.online && (
@@ -276,7 +287,9 @@ export default function Messages() {
                     <div>
                       <h2 className="font-semibold">{selectedConv.name}</h2>
                       <p className="text-sm text-muted-foreground">
-                        {selectedConv.online ? "Online" : "Last seen 2 hours ago"}
+                        {selectedConv.online
+                          ? "Online"
+                          : "Last seen 2 hours ago"}
                       </p>
                     </div>
                   </div>
@@ -299,13 +312,15 @@ export default function Messages() {
                     <div
                       key={message.id}
                       className={`flex ${
-                        message.senderId === "me" ? "justify-end" : "justify-start"
+                        message.senderId === "me"
+                          ? "justify-end"
+                          : "justify-start"
                       }`}
                     >
                       <div
                         className={`max-w-xs lg:max-w-md px-4 py-2 rounded-lg ${
                           message.senderId === "me"
-                            ? "bg-primary text-primary-foreground"
+                            ? "bg-orange-600 text-primary-foreground"
                             : "bg-muted"
                         }`}
                       >
@@ -318,7 +333,8 @@ export default function Messages() {
                           }`}
                         >
                           <span className="text-xs">{message.timestamp}</span>
-                          {message.senderId === "me" && getStatusIcon(message.status)}
+                          {message.senderId === "me" &&
+                            getStatusIcon(message.status)}
                         </div>
                       </div>
                     </div>
@@ -361,7 +377,9 @@ export default function Messages() {
               <div className="flex-1 flex items-center justify-center">
                 <div className="text-center">
                   <Mail className="h-12 w-12 mx-auto mb-4 text-muted-foreground" />
-                  <h3 className="text-lg font-semibold mb-2">Select a conversation</h3>
+                  <h3 className="text-lg font-semibold mb-2">
+                    Select a conversation
+                  </h3>
                   <p className="text-muted-foreground">
                     Choose a conversation from the sidebar to start messaging
                   </p>

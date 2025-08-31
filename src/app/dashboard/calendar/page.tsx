@@ -188,7 +188,7 @@ export default function Calendar() {
                               </div>
                               {hasEvent && (
                                 <div className="mt-1">
-                                  <div className="w-2 h-2 bg-primary rounded-full"></div>
+                                  <div className="w-2 h-2 bg-orange-600 rounded-full"></div>
                                 </div>
                               )}
                             </>
