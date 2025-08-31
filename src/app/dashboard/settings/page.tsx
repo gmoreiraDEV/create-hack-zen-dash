@@ -576,7 +576,9 @@ export default function SettingsPage() {
                 <div>
                   <h2 className="text-2xl font-bold mb-2">Privacy Settings</h2>
                   <p className="text-muted-foreground">
-                    Control who can see your information and how it's shared.
+                    {
+                      "Control who can see your information and how it's shared."
+                    }
                   </p>
                 </div>
 
@@ -628,7 +630,7 @@ export default function SettingsPage() {
                       <div>
                         <Label>Activity Status</Label>
                         <p className="text-sm text-muted-foreground">
-                          Show when you're online or active
+                          {"Show when you're online or active"}
                         </p>
                       </div>
                       <Switch

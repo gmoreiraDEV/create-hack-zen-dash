@@ -11,19 +11,9 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Progress } from "@/components/ui/progress";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 import { useSidebarStore } from "@/lib/sidebar-store";
 import { Music, CheckCircle, AlertCircle } from "lucide-react";
 import { SidebarToggle } from "@/components/sidebar-toggle";
-import { menuItems } from "@/constants";
 import { AppSidebar } from "@/components/app-sidebar";
 
 export default function UploadSound() {
